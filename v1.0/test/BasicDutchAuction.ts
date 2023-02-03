@@ -59,13 +59,12 @@ describe("BasicDutchAuction", function () {
       {
         const { dutchAuctionContract } = await loadFixture(deployDutchAuctionTestFixture);
         const options = {value: 160};
-        await dutchAuctionContract.bid(options);
         await hre.network.provider.send("hardhat_mine", ["0x100"]);
         
         await expect(dutchAuctionContract.bid(options)).to.be.revertedWith("Bids are not being accepted, the auction has ended.");
       });
 
-      it("Check if bids that are less than the auction bid amount are rejected", async function () 
+      it("Check if the bids are getting rejected once the auction closing time has elapsed.", async function () 
       {
         const { dutchAuctionContract, owner, firstAcc } = await loadFixture(deployDutchAuctionTestFixture);
         const options = {value: 50};
