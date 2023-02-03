@@ -1,5 +1,5 @@
 TN:
-SF:/Users/dheeraj/INFO-7500/DutchAuction/contracts/BasicDutchAuction.sol
+SF:/Users/dheeraj/INFO-7500/DutchAuction/v1.0/contracts/BasicDutchAuction.sol
 FN:15,constructor
 FN:26,bid
 FN:33,finalize
