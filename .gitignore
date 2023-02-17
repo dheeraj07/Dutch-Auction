@@ -2,8 +2,14 @@ v1.0/node_modules
 v1.0/.env
 v1.0/typechain
 v1.0/typechain-types
+v2.0/node_modules
+v2.0/.env
+v2.0/typechain
+v2.0/typechain-types
 
 # Hardhat files
 v1.0/cache
 v1.0/artifacts
+v2.0/cache
+v2.0/artifacts
 
