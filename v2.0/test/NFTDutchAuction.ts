@@ -20,7 +20,7 @@ describe("NFT", function () {
     
     await nftAuctionContract.mintNFT(firstAcc.address);
 
-    const auctionFactory = await ethers.getContractFactory("BasicDutchAuction");
+    const auctionFactory = await ethers.getContractFactory("NFTDutchAuction");
     const auctionContract = await auctionFactory.deploy(nftAuctionContract.address, 1, _reservePrice, _numBlocksAuctionOpen, _offerPriceDecrement);
     await nftAuctionContract.connect(firstAcc).approve(auctionContract.address, 1);
 
